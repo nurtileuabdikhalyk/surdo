@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-page-wrapper">
+    <div class="blog-section-two mt-170 lg-mt-110">
+        <div class="container">
+            <div class="title-style-one mb-50 lg-mb-20" data-aos="fade-up">
+                 <div class="title-style-one text-center mb-50 lg-mb-20" data-aos="fade-up">
+                <h5 >Тест сұрақтары</h5>
+            </div>
+                <form method='post' action=''>
+                    {% csrf_token %}
+                    {% for q in questions %}
+                    <div class="form-group">
+                        <label >{{ q.question }}</label>
+                    </div>
+                    <div class="form-check">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="{{q.question}}"
+                                   value="{{ q.op1 }}" checked>
+                            <label class="form-check-label" >
+                                {{ q.op1 }}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="{{q.question}}"
+                                   value="{{ q.op2 }}">
+                            <label class="form-check-label">
+                                {{ q.op2 }}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="{{q.question}}"
+                                   value="{{ q.op3 }}">
+                            <label class="form-check-label" >
+                                {{ q.op3 }}
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="{{q.question}}"
+                                   value="{{ q.op4 }}">
+                            <label class="form-check-label" >
+                                {{ q.op4 }}
+                            </label>
+                        </div>
+                        <br>
+                    </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary">Аяқтау</button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

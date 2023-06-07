@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="theme-inner-banner">
+    <div class="container">
+        <h2 class="intro-title text-center">Жаңалықтар</h2>
+        <ul class="page-breadcrumb style-none d-flex justify-content-center">
+            <li><a href="index.html">Басты бет</a></li>
+            <li class="current-page">Жаңалықтар</li>
+        </ul>
+    </div>
+    <img src="{% static 'images/shape/shape_38.svg' %}" alt="" class="shapes shape-one">
+    <img src="{% static 'images/shape/shape_39.svg' %}" alt="" class="shapes shape-two">
+</div>
+
+
+<div class="blog-section-three pt-90 mb-150 lg-pt-40 lg-mb-100">
+    <div class="container">
+        <div class="row gx-xxl-5">
+
+            {% for new in news %}
+            <div class="col-lg-4 col-sm-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                <article class="blog-meta-one color-two tran3s mt-45">
+                    <figure class="post-img m0"><a href="{% url 'news_detail' new.slug %}" class="w-100 d-block"><img
+                            src="{{ new.image.url }}" alt="" class="w-100 tran4s"></a></figure>
+                    <div class="post-data">
+                        <a href="{% url 'news_detail' new.slug %}" class="blog-title"><h5>{{ new.title }}</h5></a>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+        </div> <!-- /.row -->
+        <div class="page-pagination-one pt-90">
+            <ul class="d-flex align-items-center justify-content-center style-none">
+                <li>
+                    <a href="{% url 'news' %}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% for p in news.paginator.page_range %}
+                {% if news.number == p %}
+                <li class="active"><a href="?page={{ p }}">{{ p }}</a></li>
+                {% else %}
+                <li><a href="?page={{ p }}">{{ p }}</a></li>
+                {% endif %}
+                {% endfor %}
+
+                <li>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

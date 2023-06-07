@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-page-wrapper">
+
+
+    <div class="theme-inner-banner">
+        <div class="container">
+            <h2 class="intro-title text-center">{{ title }}</h2>
+            <ul class="page-breadcrumb style-none d-flex justify-content-center">
+                <li><a href="{% url 'home' %}">Басты бет</a></li>
+                <li class="current-page">{{ title }}</li>
+            </ul>
+        </div>
+        <img src="{% static 'images/shape/shape_38.svg' %}" alt="" class="shapes shape-one">
+        <img src="{% static 'images/shape/shape_39.svg' %}" alt="" class="shapes shape-two">
+    </div>
+
+
+    <div class="contact-section-one mb-170 lg-mb-120">
+        <div class="container">
+            <div class="inner-content bg-white" data-aos="fade-up">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex">
+                        <div class="address-block-one d-flex border-right">
+                            <div class="icon"><img src="{% static 'images/icon/icon_06.svg' %}" alt=""></div>
+                            <div class="text-meta">
+                                <h4 class="title">Біздің мекен-жай</h4>
+                                <p>Алматы қаласы, Әуезов ауданы <br>Жетісу-2, 62</p>
+                            </div> <!-- /.text-meta -->
+                        </div> <!-- /.address-block-one -->
+                    </div>
+                    <div class="col-md-6 d-flex">
+                        <div class="address-block-one d-flex">
+                            <div class="icon"><img src="{% static 'images/icon/icon_07.svg' %}" alt=""></div>
+                            <div class="text-meta">
+                                <h4 class="title">Телефон номер</h4>
+                                <p>Бізге қоңырау шалыңыз <br><a href="#">+7 707 178 7881</a><br><a href="#">+7 708 665
+                                    8197</a></p>
+                            </div> <!-- /.text-meta -->
+                        </div> <!-- /.address-block-one -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-100 lg-mt-70">
+            <div class="container">
+                <div class="row gx-xxl-5">
+                    <div class="col-lg-6 d-flex order-lg-last">
+                        <div class="form-style-one">
+                            <h3 class="form-title pb-40 lg-pb-20">Кері байланыс</h3>
+                            <form action="{% url 'contact' %}" method="post">
+                                {% csrf_token %}
+                                <div class="messages"></div>
+                                <div class="row controls">
+
+                                    <div class="col-12">
+                                        <div class="input-group-meta form-group mb-30">
+                                            <label>Есіміңіз*</label>
+                                            {{ form.first_name }}
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="input-group-meta form-group mb-30">
+                                            <label>Почтаңыз*</label>
+                                            {{ form.email }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="input-group-meta form-group mb-30">
+                                            {{ form.message }}
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn-eight ripple-btn">Жіберу</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div> <!-- /.form-style-one -->
+                    </div>
+
+                    <div class="col-lg-6 d-flex order-lg-first">
+                        <div class="map-area-one mt-10 me-lg-4 md-mt-50">
+                            <div class="mapouter">
+                                <div class="gmap_canvas">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1453.7315655574184!2d76.84777812725949!3d43.220748660246244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3883683547562841%3A0x28abeec2490198b2!2zNjIsINCQ0LvQvNCw0YLRiw!5e0!3m2!1sru!2skz!4v1675786007489!5m2!1sru!2skz"
+                                            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div> <!-- /.map-area-one -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /.contact-section-one -->
+</div> <!-- /.contact-section-one -->
+
+
+<button class="scroll-top">
+    <i class="bi bi-arrow-up-short"></i>
+</button>
+
+
+{% endblock content %}

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="user-data-page clearfix d-md-flex">
+    <div class="illustration-wrapper d-none d-md-flex align-items-center">
+
+        <div class="illustration-holder">
+            <img src="{% static 'images/assets/ils_22.svg' %}" alt="" class="illustration m-auto">
+        </div>
+    </div> <!-- /.illustration-wrapper -->
+
+    <div class="form-wrapper">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="logo"><a href="{% url 'home' %}" class="d-block"><img src="{% static 'images/logo/logo_01.png' %}"
+                                                                        alt=""
+                                                                        width="131"></a></div>
+
+        </div>
+        <form action="{% url 'account_signup' %}" method="post" class="user-data-form mt-60 lg-mt-40">
+            {% csrf_token %}
+            <h2>Сәлем досым, қош келдің!</h2>
+            <p class="header-info pt-20 pb-20 lg-pt-10 lg-pb-10">Сізде аккаунт барма? Кіру үшін <a
+                    href="{% url 'account_signin' %}">осында</a> басыңыз
+            </p>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="input-group-meta mb-20">
+                        <label>Есімі*</label>
+                        {{ form.first_name }}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="input-group-meta mb-20">
+                        <label>Тегі</label>
+                        {{ form.last_name }}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="input-group-meta mb-20">
+                        <label>Логин*</label>
+                        {{ form.username }}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="input-group-meta mb-20">
+                        <label>Телефон*</label>
+                        {{ form.phone }}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="input-group-meta mb-20">
+                        <label>Құпия сөз*</label>
+
+                        {{ form.password1 }}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="input-group-meta mb-20">
+                        <label>Құпия сөзді қайталаңыз*</label>
+
+                        {{ form.password2 }}
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn-eight w-100 mt-50 mb-40 lg-mt-30 lg-mb-30">Тіркелу</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<button class="scroll-top">
+    <i class="bi bi-arrow-up-short"></i>
+</button>
+
+
+{% endblock content %}

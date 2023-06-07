@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-page-wrapper">
+    <div class="blog-section-two mt-170 lg-mt-110">
+        <div class="container">
+            <div class="title-style-one text-center mb-50 lg-mb-20" data-aos="fade-up">
+                <div class="container ">
+
+                    <div class="card-columns" style="padding: 10px; margin: 20px;">
+                        <div class="card" align="centre " style="width: 32rem; border:5px black solid">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Ұпай: {{ score }}</h5>
+
+                                <p class="card-text">Пайыз: {{ percent }}%</p>
+                                <p class="card-text">Дұрыс жауаптар саны: {{ correct }}</p>
+                                <p class="card-text">Қате жауаптар саны: {{ wrong }}</p>
+                                <p class="card-text">Барлық сұрақтар саны: {{ total }}</p>
+                                <a href="{% url 'home' %}">
+                                    <button type="submit" class="btn btn-primary">Басты бетке өту</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

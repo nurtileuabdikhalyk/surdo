@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-page-wrapper">
+
+
+    <div class="user-data-page clearfix d-md-flex">
+        <div class="illustration-wrapper d-none d-md-flex align-items-center">
+            <br>
+            <br>
+            <div class="illustration-holder">
+                <img src="{% static 'images/assets/ils_22.svg' %}" alt="" class="illustration m-auto">
+            </div>
+        </div> <!-- /.illustration-wrapper -->
+
+        <div class="form-wrapper">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo"><a href="{% url 'home' %}" class="d-block"><img src="{% static 'images/logo/logo_01.png' %}"
+                                                                            alt=""
+                                                                            width="131"></a></div>
+
+            </div>
+            <br>
+            <form action="{% url 'account_signin' %}" class="user-data-form mt-60 lg-mt-40" method="post">
+                {% csrf_token %}
+                <h2>Сәлем досым, қош келдің!</h2>
+                <p class="header-info pt-20 pb-20 lg-pt-10 lg-pb-10">Жүйеде тіркелмегенсіз бе? <a
+                        href="{% url 'account_signup' %}">Тіркелу</a></p>
+                <p class="header-info pt-20 pb-20 lg-pt-10 lg-pb-10" style="color:#913bff">{{ messages }}</p>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group-meta mb-25">
+                            <label>Логин</label>
+                            {{ form.login }}
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group-meta mb-25">
+                            <label>Құпия сөз</label>
+                            {{ form.password }}
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn-eight w-100 mt-50 mb-40 lg-mt-30 lg-mb-30">Кіру</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <button class="scroll-top">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+
+</div>
+{% endblock content %}

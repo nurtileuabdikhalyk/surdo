@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/png" sizes="56x56" href="{% static 'images/fav-icon/icon.png' %}">
+    <!-- Main style sheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="all">
+    <!-- responsive style sheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" media="all">
+
+
+</head>
+<body>
+{% include 'include/header.html' %}
+
+{% block content %}
+
+
+{% endblock content %}
+
+{% include 'include/footer.html' %}
+<script src="{% static 'vendor/jquery.min.js' %}"></script>
+<!-- Bootstrap JS -->
+
+<script src="{% static 'vendor/skills-master/jquery.skills.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<script src="{% static 'vendor/validator.js' %}"></script>
+<!-- AOS js -->
+<script src="{% static 'vendor/aos-next/dist/aos.js' %}"></script>
+<!-- Slick Slider -->
+<script src="{% static 'vendor/slick/slick.min.js' %}"></script>
+<!-- js Counter -->
+<script src="{% static 'vendor/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'vendor/jquery.waypoints.min.js' %}"></script>
+<!-- Fancybox -->
+<script src="{% static 'vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+
+<!-- Theme js -->
+<script src="{% static 'js/theme.js' %}"></script>
+
+
+<!-- Theme js -->
+<script src="js/theme.js"></script>
+
+<script src="vendor/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AOS js -->
+<script src="vendor/aos-next/dist/aos.js"></script>
+<!-- Slick Slider -->
+<script src="vendor/slick/slick.min.js"></script>
+<!-- js Counter -->
+<script src="vendor/jquery.counterup.min.js"></script>
+<script src="vendor/jquery.waypoints.min.js"></script>
+<!-- Fancybox -->
+<script src="vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+<!-- validator js -->
+
+</body>
+</html>

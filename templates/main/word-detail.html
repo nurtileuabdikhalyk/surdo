@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-page-wrapper">
+
+
+    <div class="theme-inner-banner">
+        <div class="container">
+            <h2 class="intro-title text-center">{{ word.word }}</h2>
+            <ul class="page-breadcrumb style-none d-flex justify-content-center">
+                <li><a href="{% url 'home' %}">Басты бет</a></li>
+                <li class="current-page">{{ word.word }}</li>
+            </ul>
+        </div>
+        <img src="{% static 'images/shape/shape_38.svg' %}" alt="" class="shapes shape-one">
+        <img src="{% static 'images/shape/shape_39.svg' %}" alt="" class="shapes shape-two">
+    </div> <!-- /.theme-inner-banner -->
+
+
+    <div class="blog-details pt-90 mb-150 lg-pt-40 lg-mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-11 m-auto">
+                    <div class="row">
+                        <div class="col-lg-8">
+
+
+                            <div class="post-data">
+                                <iframe width="630" height="400"
+                                        src="https://www.youtube.com/embed/{{ word.url_youtube }}"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+
+                                <p>{{ word.description }}</p>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock content %}

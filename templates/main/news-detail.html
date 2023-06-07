@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-page-wrapper">
+
+
+
+    <div class="theme-inner-banner">
+        <div class="container">
+            <h2 class="intro-title text-center">{{ new.title }}</h2>
+            <ul class="page-breadcrumb style-none d-flex justify-content-center">
+                <li><a href="{% url 'home' %}">Басты бет</a></li>
+                <li><a href="{% url 'news' %}">Жаңалықтар</a></li>
+                <li class="current-page">{{ new.title }}</li>
+            </ul>
+        </div>
+        <img src="{% static 'images/shape/shape_38.svg' %}" alt="" class="shapes shape-one">
+        <img src="{% static 'images/shape/shape_39.svg' %}" alt="" class="shapes shape-two">
+    </div> <!-- /.theme-inner-banner -->
+
+
+    <div class="blog-details pt-90 mb-150 lg-pt-40 lg-mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-11 m-auto">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <article class="blog-meta-three tran3s mt-45">
+                                <figure class="post-img m0"><img src="{{ new.image.url }}" alt=""
+                                                                 class="w-100 tran4s"></figure>
+                                <div class="post-data">
+
+
+                                    <p>{{ new.description }}</p>
+
+
+                                </div>
+                            </article>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="main-page-wrapper">
+    <div class="hero-banner-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-md-6">
+                    <h1 class="hero-heading">IT терминдердің қазақша ымдау тіліндегі жинағы</h1>
+                    <p class="text-lg mb-50 lg-mb-40"></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="illustration-holder sm-mt-50">
+            <img src="{% static 'images/assets/ils_03.svg' %}" alt=""
+                 class="main-illustration transform-img-meta ms-auto">
+            <img src="{% static 'images/shape/shape_19.png' %}" alt="" class="shapes shape-one">
+        </div>
+        <img src="{% static 'images/shape/shape_18.svg' %}" alt="" class="shapes cube-shape">
+    </div>
+
+    <br>
+    <div class="blog-section-two mt-170 lg-mt-110">
+        <div class="container">
+            <div class="title-style-one text-center mb-50 lg-mb-20" data-aos="fade-up">
+                <h2 class="main-title">Сөздік</h2>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="{% url 'sort' %}?sort=А" methods="get">А</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ә" methods="get">Ә</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Б" methods="get">Б</a></td>
+                        <td><a href="{% url 'sort' %}?sort=В" methods="get">В</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Г" methods="get">Г</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ғ" methods="get">Ғ</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Д" methods="get">Д</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Е" methods="get">Е</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ё" methods="get">Ё</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ж" methods="get">Ж</a></td>
+                        <td><a href="{% url 'sort' %}?sort=З" methods="get">З</a></td>
+                        <td><a href="{% url 'sort' %}?sort=И" methods="get">И</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Й" methods="get">Й</a></td>
+                        <td><a href="{% url 'sort' %}?sort=К" methods="get">К</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{% url 'sort' %}?sort=Қ" methods="get">Қ</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Л" methods="get">Л</a></td>
+                        <td><a href="{% url 'sort' %}?sort=М" methods="get">М</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Н" methods="get">Н</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ң" methods="get">Ң</a></td>
+                        <td><a href="{% url 'sort' %}?sort=О" methods="get">О</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ө" methods="get">Ө</a></td>
+                        <td><a href="{% url 'sort' %}?sort=П" methods="get">П</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Р" methods="get">Р</a></td>
+                        <td><a href="{% url 'sort' %}?sort=С" methods="get">С</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Т" methods="get">Т</a></td>
+                        <td><a href="{% url 'sort' %}?sort=У" methods="get">У</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ұ" methods="get">Ұ</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ү" methods="get">Ү</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{% url 'sort' %}?sort=Ф" methods="get">Ф</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Х" methods="get">Х</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Һ" methods="get">Һ</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ц" methods="get">Ц</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ч" methods="get">Ч</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ш" methods="get">Ш</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Щ" methods="get">Щ</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ъ" methods="get">Ъ</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ы" methods="get">Ы</a></td>
+                        <td><a href="{% url 'sort' %}?sort=І" methods="get">І</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ь" methods="get">Ь</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Э" methods="get">Э</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Ю" methods="get">Ю</a></td>
+                        <td><a href="{% url 'sort' %}?sort=Я" methods="get">Я</a></td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="blog-section-three pt-90 mb-150 lg-pt-40 lg-mb-100">
+        <div class="container">
+            <div class="row gx-xxl-5">
+                {% for dictionary in dictionaries %}
+                <div class="col-lg-4 col-sm-6 d-flex" data-aos="fade-up">
+                    <article class="blog-meta-one color-two tran3s mt-45">
+
+                        <div class="icon d-flex align-items-end"><img src="{% static 'images/icon/icon_19.svg' %}"
+                                                                      alt=""></div>
+                        <div class="post-data">
+                            <a href="{% url 'word_detail' dictionary.slug %}" class="blog-title"><h5>{{ dictionary.word }}</h5></a>
+                            <p>{{ dictionary.description|truncatechars:50 }}</p>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="fancy-feature-nineteen position-relative pt-160 lg-pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-5 col-lg-6 col-md-7">
+                    <div class="block-style-thirteen" data-aos="fade-right">
+                        <div class="title-style-three pb-15">
+                            <h2 class="main-title">Жүйенің артықшылығы</h2>
+                        </div>
+                        <ul class="style-none list-item">
+                            <li data-aos="fade-up">
+                                <div class="numb tran3s">1</div>
+                                <h6>Түсіндірмелі сөздік</h6>
+                                <span> IT терминдердің қазақ тіліндегі жинағы түсіндірмелі сөздік ретінде жасалынған.</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="50">
+                                <div class="numb tran3s">2</div>
+                                <h6>Ымдау тілі </h6>
+                                <span>Ымдап сөйлейтін адамдарға кең қолданыстағы IT терминдері қазақша ымдау тіліне аударылған.</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="100">
+                                <div class="numb tran3s">3</div>
+                                <h6>Бейне түсіндірме</h6>
+                                <span>Есту қабілеті нашар тұлғаларға бағытталған бейнетүсіндірмесі бар.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="illustration-holder" data-aos="fade-left">
+            <img src="{% static 'images/assets/ils_15.svg' %}" alt="" class="w-100 main-illustration">
+            <img src="{% static 'images/assets/ils_15_1.svg' %}" alt="" class="shapes shape-one">
+            <img src="{% static 'images/assets/ils_15_2.svg' %}" alt="" class="shapes shape-two">
+            <img src="{% static 'images/assets/ils_15_3.svg' %}" alt="" class="shapes shape-three">
+            <img src="{% static 'images/assets/ils_15_4.svg' %}" alt="" class="shapes shape-four">
+            <img src="{% static 'images/assets/ils_15_5.svg' %}" alt="" class="shapes shape-five" data-aos="fade-down"
+                 data-aos-delay="200" data-aos-duration="2000">
+            <img src="{% static 'images/assets/ils_15_6.svg" alt="" class="shapes shape-six" data-aos="fade-down"
+                 data-aos-delay="100" data-aos-duration="2000' %}">
+            <img src="{% static 'images/assets/ils_15_7.svg' %}" alt="" class="shapes shape-seven" data-aos="fade-down"
+                 data-aos-duration="2000">
+        </div> <!-- /.illustration-holder -->
+        <div class="shapes oval-one"></div>
+        <div class="shapes oval-two"></div>
+        <img src="{% static 'images/shape/shape_47.svg' %}" alt="" class="shapes bg-shape-two">
+    </div>
+    <div class="blog-section-two mt-170 lg-mt-110">
+        <div class="container">
+            <div class="title-style-one text-center mb-50 lg-mb-20" data-aos="fade-up">
+                <h2 class="main-title"><a href="{% url 'news' %}" class="read-btn tran3s">Жаңалықтар </a></h2>
+            </div>
+
+            <div class="row gx-xxl-5">
+
+                {% for new in news %}
+                <div class="col-lg-4 col-sm-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <article class="blog-meta-two mt-30">
+                        <figure class="post-img m0"><a href="{% url 'news_detail' new.slug %}"
+                                                       class="w-100 d-block"><img
+                                src="{{ new.image.url }}" alt="" class="w-100 tran4s"></a></figure>
+                        <div class="post-data">
+                            <div class="post-tag"><a href="{% url 'news_detail' new.slug %}">{{ new.created }}</a></div>
+                            <a href="{% url 'news_detail' new.slug %}" class="blog-title"><h5>{{ new.title }}</h5></a>
+                            <a href="{% url 'news_detail' new.slug %}" class="read-btn tran3s">Әрі қарай оқу <i
+                                    class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-top">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+
+</div>
+
+{% endblock content %}

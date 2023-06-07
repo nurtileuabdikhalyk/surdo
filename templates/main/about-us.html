@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="main-page-wrapper">
+
+    <div class="theme-inner-banner">
+        <div class="container">
+            <h2 class="intro-title text-center">{{ title }}</h2>
+            <ul class="page-breadcrumb style-none d-flex justify-content-center">
+                <li><a href="{% url 'home' %}">Басты бет</a></li>
+                <li class="current-page">{{ title }}</li>
+            </ul>
+        </div>
+        <img src="{% static 'images/shape/shape_38.svg' %}" alt="" class="shapes shape-one">
+        <img src="{% static 'images/shape/shape_39.svg' %}" alt="" class="shapes shape-two">
+    </div>
+
+
+    <div class="fancy-feature-two position-relative mt-140 lg-mt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12 col-lg-6 col-md-7 ms-auto">
+                    <div class="block-style-two" data-aos="fade-left">
+                        <div class="title-style-one">
+                            <h2 class="main-title">Жоба және әзірлеушілер туралы: </h2>
+                        </div>
+                        <p class="pt-10 pb-20 lg-pb-10">Сурдосервер IT терминдерінің қазақ ымдау тiлiне онлайн қол
+                            жеткiзудiң ресурстарына саңырауларға және нашар еститін адамдарына және барлық қалағандарға
+                            көмегi үшiн құрастырылған.</p>
+                        <ul class="style-none list-item color-rev">
+                            <li>Жасұлан Жалел</li>
+                            <li>Айбарыс Көпжүрсінов</li>
+                        </ul>
+
+                    </div>
+                    <br>
+                    <div class="block-style-two" data-aos="fade-left">
+                        <div class="title-style-one">
+                            <h2 class="main-title">Бiздiң веб-қосымшаның негiзгi құрамдас бөлігі болып табылады: </h2>
+                        </div>
+
+                        <ul class="style-none list-item color-rev">
+                            <li>Қазақ тiлi үшiн ым бейнелейтiн, видео қарап шығу және іздестiрудiң ыңғайлы жүйесi;</li>
+                            <li>Білім</li>
+                            <li>Жұмыс</li>
+                            <li>Тілдескіш</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <button class="scroll-top">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+
+
+</div>
+{% endblock content %}

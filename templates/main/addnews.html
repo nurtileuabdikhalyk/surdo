@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-page-wrapper">
+    <div class="blog-section-two mt-170 lg-mt-110">
+        <div class="container">
+            <div class="title-style-one text-center mb-50 lg-mb-20" data-aos="fade-up">
+
+
+            <form action="{% url 'addnews' %}" class="user-data-form mt-60 lg-mt-40" method="post"  enctype="multipart/form-data">
+                {% csrf_token %}
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group-meta mb-25">
+                            <h5>Жаңалық тақырыбы</h5>
+                            {{ form.title }}
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group-meta mb-25">
+                            <h5>Сурет</h5>
+                            {{ form.image }}
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group-meta mb-25">
+                            <h5>Жаңалық сипаттамасы</h5>
+                            {{ form.description }}
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn-eight w-100 mt-50 mb-40 lg-mt-30 lg-mb-30">Қосу</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
